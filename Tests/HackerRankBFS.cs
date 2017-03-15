@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Library;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Tests {
     [TestClass]
@@ -59,7 +60,9 @@ namespace Tests {
             // arrange
             String line;
             // Read the file and display it line by line.
-            System.IO.StreamReader file = new System.IO.StreamReader("C:\\Users\\v-ancrem\\TestingPen\\Tests\\BFSinput.txt");
+            var fullPath = Directory.GetCurrentDirectory();
+            var path = Path.GetFullPath(Path.Combine(fullPath, @"..\..\"));
+            System.IO.StreamReader file = new System.IO.StreamReader(Path.Combine(path,"BFSinput.txt"));
             while ((line = file.ReadLine()) != null) {
                 // n of queries
                 var q = Convert.ToInt32(line);
