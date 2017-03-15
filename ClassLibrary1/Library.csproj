@@ -40,10 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cracking\BackTracking.cs" />
     <Compile Include="Cracking\Chapter1.cs" />
+    <Compile Include="Cracking\Chapter2.cs" />
+    <Compile Include="Cracking\Chapter3.cs" />
     <Compile Include="Cracking\Chapter4.cs" />
     <Compile Include="Cracking\Chapter5.cs" />
     <Compile Include="Cracking\Coins.cs" />
+    <Compile Include="Cracking\Sorting.cs" />
     <Compile Include="Leet\BinSearch.cs" />
     <Compile Include="Leet\Btrk.cs" />
     <Compile Include="Sorting\Sorting.cs" />

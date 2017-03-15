@@ -53,10 +53,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BinSearchTest.cs" />
+    <Compile Include="Cracking\BackTrackTest.cs" />
     <Compile Include="Cracking\Chapter1Tests.cs" />
+    <Compile Include="Cracking\chapter2Tests.cs" />
+    <Compile Include="Cracking\Chapter3Test.cs" />
     <Compile Include="Cracking\Chapter4.test.cs" />
     <Compile Include="Cracking\Chapter5.test.cs" />
     <Compile Include="Cracking\CoinsTest.cs" />
+    <Compile Include="Cracking\SortingTest.cs" />
     <Compile Include="DirWeighGTests.cs" />
     <Compile Include="GraphTests.cs" />
     <Compile Include="HackerRankBFS.cs" />
