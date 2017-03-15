@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algos\KitchenSink.cs" />
     <Compile Include="Cracking\BackTracking.cs" />
     <Compile Include="Cracking\Chapter1.cs" />
     <Compile Include="Cracking\Chapter2.cs" />

@@ -65,6 +65,7 @@
     <Compile Include="GraphTests.cs" />
     <Compile Include="HackerRankBFS.cs" />
     <Compile Include="HeapTest.cs" />
+    <Compile Include="KitchenSink.Test.cs" />
     <Compile Include="Leet\BtrkTest.cs" />
     <Compile Include="LFUCacheTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
