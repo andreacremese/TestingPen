@@ -59,6 +59,7 @@
     <Compile Include="Structures\LFCache.cs" />
     <Compile Include="Structures\MinHeap.cs" />
     <Compile Include="Structures\Tree.cs" />
+    <Compile Include="Structures\MyTrie.cs" />
     <Compile Include="Structures\WeightedGraphAlternate.cs" />
     <Compile Include="Structures\WeightedGraph.cs" />
     <Compile Include="Structures\Graph.cs" />
