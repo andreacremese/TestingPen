@@ -73,7 +73,6 @@
     <Compile Include="Leet\BtrkTest.cs" />
     <Compile Include="LFUCacheTest.cs" />
     <Compile Include="MyTrie.Test.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DagTest.cs" />
     <Compile Include="Sorting\Sorting.Test.cs" />
     <Compile Include="TreeTest.cs" />

@@ -4,6 +4,9 @@
     "debugType": "portable"
   },
   "frameworks": {
+    ".NETFramework,Version=v4.0": {},
+    ".NETFramework,Version=v4.5.2": {},
+    "v4.5.2": {},
     "netcoreapp1.1": {
       "dependencies": {
         "Microsoft.NETCore.App": {
@@ -13,5 +16,8 @@
       },
       "imports": "dnxcore50"
     }
+  },
+  "runtimes": {
+    "win": {}
   }
 }
