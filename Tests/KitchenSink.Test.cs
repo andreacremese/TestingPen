@@ -99,5 +99,84 @@ namespace Tests {
         }
 
 
+        // =================== find overlaps =============================
+        [Test]
+        public void INtersectFindNotIntersectLowerA() {
+            // act
+            var output = KitchenSink.Intersect(1, 2, 3, 4);
+            // assert
+            Assert.IsFalse(output);
+        }
+
+        [Test]
+        public void IntersectFindNotIntersectLowerAReverseB() {
+            // act
+            var output = KitchenSink.Intersect(1, 2, 4, 3);
+            // assert
+            Assert.IsFalse(output);
+        }
+
+        [Test]
+        public void IntersectFindNotIntersectReverseLOwerA() {
+            // act
+            var output = KitchenSink.Intersect(2, 1, 4,3);
+            // assert
+            Assert.IsFalse(output);
+        }
+
+
+        [Test]
+        public void IntersectFindNotIntersectHIgherA() {
+            // act
+            var output = KitchenSink.Intersect(5,6 , 3, 4);
+            // assert
+            Assert.IsFalse(output);
+        }
+
+        [Test]
+        public void IntersectFindNotIntersectHIgherAReverse() {
+            // act
+            var output = KitchenSink.Intersect(5, 6, 4, 2);
+            // assert
+            Assert.IsFalse(output);
+        }
+
+        [Test]
+        public void IntersectFindNotIntersectHIgher() {
+            // act
+            var output = KitchenSink.Intersect(6, 5, 4, 3);
+            // assert
+            Assert.IsFalse(output);
+        }
+
+
+        [Test]
+        public void IntersectFindIntersections() {
+            // act
+            var output = KitchenSink.Intersect(1, 3, 2, 3);
+            // assert
+            Assert.IsTrue(output);
+        }
+
+
+        [Test]
+        public void IntersectFindIntersectionsSubset() {
+            // act
+            var output = KitchenSink.Intersect(1, 5, 2, 3);
+            // assert
+            Assert.IsTrue(output);
+        }
+
+        [Test]
+        public void IntersectFindIntersectionsSubsetReversed() {
+            // act
+            var output = KitchenSink.Intersect(5,1, 2, 3);
+            // assert
+            Assert.IsTrue(output);
+        }
+
+
+
+
     }
 }

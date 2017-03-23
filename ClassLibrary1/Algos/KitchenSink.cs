@@ -58,5 +58,15 @@ namespace ClassLibrary1.Algos {
             intermediate[i] = result;
             return result;
         }
+
+        // find if two intervals overlap without sortign the numbers
+        public static Boolean Intersect(Int32 a1, Int32 a2, Int32 b1, Int32 b2) {
+
+            if (a1 < b1 && a2 < b1 && a1 < b2 && a2 < b2) { return false; }
+            if (a1 > b1 && a2 > b1 && a1 > b2 && a2 > b2) { return false; }
+
+
+            return true;
+        }
     }
 }
