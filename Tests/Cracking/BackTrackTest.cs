@@ -1,12 +1,12 @@
 ﻿using ClassLibrary1.Cracking;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
 namespace Tests.Cracking {
-    [TestClass]
+[TestFixture]
     public class BackTrackTest {
-        [TestMethod]
+        [Test]
         public void Backtrack_onstring() {
             // arrange
             var s = "abc";

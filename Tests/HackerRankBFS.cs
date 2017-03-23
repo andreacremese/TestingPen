@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Library;
 using System.Collections.Generic;
 using System.IO;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class HackerRankBFS {
-        [TestMethod]
+        [Test]
         public void HackerRankBFS1() {
             // first hackerrank example
             // arrange
@@ -32,7 +32,7 @@ namespace Tests {
             CollectionAssert.AreEqual(expected, result);
         }
 
-        [TestMethod]
+        [Test]
         public void HackerRankBFS2() {
             // arrange
             var _sut = new Graph();
@@ -55,13 +55,13 @@ namespace Tests {
             CollectionAssert.AreEqual(expected, result);
         }
 
-        [TestMethod]
+        [Test]
         public void TestMethod3() {
             // arrange
             String line;
             // Read the file and display it line by line.
             var fullPath = Directory.GetCurrentDirectory();
-            var path = Path.GetFullPath(Path.Combine(fullPath, @"..\..\"));
+            var path = Path.GetFullPath(Path.Combine(fullPath, "Tests"));
             System.IO.StreamReader file = new System.IO.StreamReader(Path.Combine(path,"BFSinput.txt"));
             while ((line = file.ReadLine()) != null) {
                 // n of queries

@@ -1,10 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using static ClassLibrary1.Cracking.Chapter4;
 
 namespace Tests.Cracking {
-    [TestClass]
+[TestFixture]
     public class Chapter4 {
-        [TestMethod]
+        [Test]
         public void Chapter4_IsBalanced_ReturnsTrue() {
             // arrange
             var root = new Node(0);
@@ -17,7 +17,7 @@ namespace Tests.Cracking {
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
+        [Test]
         public void Chapter4_IsBalanced_ReturnsTrue1() {
             // arrange
             var root = new Node(0);
@@ -29,7 +29,7 @@ namespace Tests.Cracking {
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
+        [Test]
         public void Chapter4_IsBalanced_ReturnsFalse() {
             // arrange
             var root = new Node(0);

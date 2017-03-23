@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Library;
 using System.Collections.Generic;
 using System.Linq;
 using ClassLibrary1.Structures;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class HackerRankDijkstra {
-        [TestMethod]
+        [Test]
         public void TestMethod1() {
             // arrange
             var n = 4;
@@ -46,7 +46,7 @@ namespace Tests {
             Assert.AreEqual(expected, result);
         }
 
-        [TestMethod]
+        [Test]
         public void TestMethod2() {
             // arrange
             var n = 4;

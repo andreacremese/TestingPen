@@ -1,10 +1,10 @@
 ﻿using ClassLibrary1.Structures;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class MyTrieTest {
-        [TestMethod]
+        [Test]
         public void TrieCanAddWord() {
             //  arrange
             var _sut = new MyTrie();
@@ -30,7 +30,7 @@ namespace Tests {
             Assert.IsTrue(second.isComplete);
         }
 
-        [TestMethod]
+        [Test]
         public void TrieCanFindWordCount() {
             //  arrange
             var _sut = new MyTrie();
@@ -51,7 +51,7 @@ namespace Tests {
         }
 
 
-        //[TestMethod]
+        //[Test]
         //public void ProfileTrie() {
         //    //  arrange
         //    var _sut = new MyTrie();

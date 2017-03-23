@@ -1,10 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using ClassLibrary1.Structures;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class LFUCacheTest {
-        [TestMethod]
+        [Test]
         public void LFUBaseMethods() {
             // arrange
             var sut = new LFUCache(2);
@@ -22,7 +22,7 @@ namespace Tests {
         }
 
 
-        [TestMethod]
+        [Test]
         public void LFUBaseMethod1() {
             // arrange
             var sut = new LFUCache(2);

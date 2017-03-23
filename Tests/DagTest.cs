@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Library;
 using System.Collections.Generic;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class DagTest {
-        [TestMethod]
+        [Test]
         public void TopologicalSort() {
             // arrange
             var v1 = new Vertice(1);

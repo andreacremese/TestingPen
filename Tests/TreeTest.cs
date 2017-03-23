@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using ClassLibrary1.Structures;
 using Library;
 using System.Linq;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class TreeTest {
-        [TestMethod]
+        [Test]
         public void CanBeInitialized() {
             // arrange
             var _sut = new Tree();
@@ -17,29 +17,7 @@ namespace Tests {
             Assert.AreEqual(new TreeNode(1), _sut.Start);
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(Exception), "Tree already has a start")]
-        public void ThrowsIfTwoStarts() {
-            // arrange
-            var _sut = new Tree();
-            // act
-            _sut.AddStartNode(1);
-            _sut.AddStartNode(2);
-            // assert
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(Exception), "Tree already contains that node")]
-        public void ThrowsIfAddingToNotExistantParent() {
-            // arrange
-            var _sut = new Tree();
-            // act
-            _sut.AddStartNode(1);
-            _sut.AddNode(1, 1);
-            // assert
-        }
-
-        [TestMethod]
+        [Test]
         public void CanAddNode() {
             // arrange
             var _sut = new Tree();
@@ -51,7 +29,7 @@ namespace Tests {
             Assert.IsTrue(_sut.Start.Childs.Any(x => x.Value == 2), "Child node not added");
         }
 
-        [TestMethod]
+        [Test]
         public void CanFind() {
             // arrange
             var _sut = new Tree();
@@ -65,7 +43,7 @@ namespace Tests {
             Assert.IsNotNull(v2, "Node added could not be found");
         }
 
-        [TestMethod]
+        [Test]
         public void TestDfsBasicTree() {
             // Arrange
             var _sut = new Tree();
@@ -84,7 +62,7 @@ namespace Tests {
             Assert.AreEqual(result[3], 4);
         }
 
-        [TestMethod]
+        [Test]
         public void TestBfsBasicTree() {
             // Arrange
             var _sut = new Tree();

@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using ClassLibrary1.Cracking;
 using static ClassLibrary1.Cracking.Coins;
 
 namespace Tests.Cracking {
-    [TestClass]
+[TestFixture]
     public class CoinsTest {
-        [TestMethod]
+        [Test]
         public void Coins_canGiveChange() {
             // arrange
             var n = 11;
@@ -22,7 +22,7 @@ namespace Tests.Cracking {
             Assert.IsTrue(output.Contains(o3));
         }
 
-        [TestMethod]
+        [Test]
         public void Coins_canGiveChangeFromZero() {
             // arrange
             var n = 0;

@@ -1,10 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using ClassLibrary1.Cracking;
 
 namespace Tests.Cracking {
-    [TestClass]
+[TestFixture]
     public class Chapter3Test {
-        [TestMethod]
+        [Test]
         public void MinStack1() {
             //// arrange
             //var _sut = new MyStack();

@@ -1,10 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using ClassLibrary1.Structures;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class WeightedGraphAlternateTest {
-        [TestMethod]
+        [Test]
         public void canAddEdges() {
             // arrange
             var m = 5;

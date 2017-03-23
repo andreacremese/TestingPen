@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using ClassLibrary1.Cracking;
 using System;
 using System.Collections.Generic;
 
 namespace Tests.Cracking {
-    [TestClass]
+[TestFixture]
     public class SortingTest {
-        [TestMethod]
+        [Test]
         public void Sorting_onMergeSort_canSortOdd() {
             // arrange
             var input = new List<Int32> { 5, 4, 3, 2, 1 };
@@ -19,7 +19,7 @@ namespace Tests.Cracking {
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Sorting_onMergeSort_canSortEven() {
             // arrange
             var input = new List<Int32> { 4, 3, 2, 1 };
@@ -33,7 +33,7 @@ namespace Tests.Cracking {
         }
 
 
-        [TestMethod]
+        [Test]
         public void Sorting_onHeapSort_canSortEven() {
             // arrange
             var input = new List<Int32> { 4, 3, 1, 2 };
@@ -46,7 +46,7 @@ namespace Tests.Cracking {
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Sorting_onHeapSort_canSortOdd() {
             // arrange
             var input = new List<Int32> { 4, 3, 2, 5 ,1 };
@@ -59,7 +59,7 @@ namespace Tests.Cracking {
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Sorting_onHeapSort_canSortLongerArray() {
             // arrange
             var input = new List<Int32> { 4, 3, 2, 5, 1 , 10, 9, 8, 7, 6};

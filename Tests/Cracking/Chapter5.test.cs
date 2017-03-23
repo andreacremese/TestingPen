@@ -1,11 +1,11 @@
 ﻿using ClassLibrary1.Cracking;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using static ClassLibrary1.Cracking.Chapter4;
 
 namespace Tests.Cracking {
-    [TestClass]
+[TestFixture]
     public class Chapter5_test {
-        [TestMethod]
+        [Test]
         public void ShitSpecial_onShift_works() {
             // Arrange
             var N = 1024;

@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using ClassLibrary1.Structures;
 using System.Diagnostics;
 using System;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class DirWeighGTests {
-        [TestMethod]
+        [Test]
         public void AllPairsShortest() {
             // arrange
             var m = 4;
@@ -30,7 +30,7 @@ namespace Tests {
             Assert.AreEqual(11, result[1][4]);
         }
 
-        [TestMethod]
+        [Test]
         public void AllPairsShortest1() {
             // arrange
             var m = 4;

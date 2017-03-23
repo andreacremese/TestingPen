@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Library;
 using System.Collections.Generic;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class UnitTest1 {
 
-        [TestMethod]
+        [Test]
         public void Djkstra() {
             // arrange
             var v1 = new Vertice(1);
@@ -36,7 +36,7 @@ namespace Tests {
             Assert.AreEqual(expected, cost);
         }
 
-        [TestMethod]
+        [Test]
         public void Djkstra1() {
             // arrange
             var v1 = new Vertice(1);
@@ -66,7 +66,7 @@ namespace Tests {
             Assert.AreEqual(expected, cost);
         }
 
-        [TestMethod]
+        [Test]
         public void Djkstra2() {
             // arrange
             var v1 = new Vertice(1);

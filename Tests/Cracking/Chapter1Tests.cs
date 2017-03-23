@@ -1,32 +1,32 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using ClassLibrary1.Cracking;
 
 namespace Tests.Cracking {
-    [TestClass]
+[TestFixture]
     public class Chapter1Tests {
         // NOTE that these test methods are rapid for training purpose only
         // to test hand written code that is transcribed to the methods
-        [TestMethod]
+        [Test]
         public void Probmel11() {
             Assert.IsTrue(Chapter1.AllUniqueCharacters("andre"));
             Assert.IsFalse(Chapter1.AllUniqueCharacters("andrea"));
         }
 
-        [TestMethod]
+        [Test]
         public void Probmel11Alternate() {
             Assert.IsTrue(Chapter1.AllUniqueCharacters1("andre"));
             Assert.IsFalse(Chapter1.AllUniqueCharacters1("andrea"));
         }
 
-        [TestMethod]
+        [Test]
         public void Problem3() {
             Assert.AreEqual("andret",Chapter1.RemoveDuplicastes("andret"));
             Assert.AreEqual("andre",Chapter1.RemoveDuplicastes("andrea"));
             Assert.AreEqual("ab",Chapter1.RemoveDuplicastes("aaaaaabbbbbb"));
         }
 
-        [TestMethod]
+        [Test]
         public void Problem4() {
             Assert.AreEqual("and%20rea", Chapter1.ReplaceSpaces("and rea"));
             Assert.AreEqual("andrea", Chapter1.ReplaceSpaces("andrea"));
@@ -34,7 +34,7 @@ namespace Tests.Cracking {
 
         }
 
-        [TestMethod]
+        [Test]
         public void Problem5() {
             // arrange
             var image = new Int32[2, 2];

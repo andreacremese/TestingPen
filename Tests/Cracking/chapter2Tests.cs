@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using ClassLibrary1.Cracking;
 using System;
 
 namespace Tests.Cracking {
-    [TestClass]
+[TestFixture]
     public class chapter2Tests {
-        [TestMethod]
+        [Test]
         public void TestLinkedList() {
             // arrange
             var head = new Node(1);
@@ -17,7 +17,7 @@ namespace Tests.Cracking {
         }
 
 
-        [TestMethod]
+        [Test]
         public void CanDeleteValueInMiddle() {
             // arrange
             var head = new Node(1);
@@ -32,7 +32,7 @@ namespace Tests.Cracking {
             EnsureListContains(result, 3);
         }
 
-        [TestMethod]
+        [Test]
         public void CanDeleteFirstValue() {
             // arrange
             var head = new Node(1);
@@ -48,7 +48,7 @@ namespace Tests.Cracking {
         }
 
 
-        [TestMethod]
+        [Test]
         public void CanDeleteLastValue() {
             // arrange
             var head = new Node(1);
@@ -63,7 +63,7 @@ namespace Tests.Cracking {
             EnsureListContains(result, 2);
         }
 
-        [TestMethod]
+        [Test]
         public void Removes() {
             // arrange
             var head = new Node(1);
@@ -78,7 +78,7 @@ namespace Tests.Cracking {
         }
 
 
-        [TestMethod]
+        [Test]
         public void FindNth1() {
             // arrange
             var head = Get1234List();
@@ -89,7 +89,7 @@ namespace Tests.Cracking {
         }
 
 
-        [TestMethod]
+        [Test]
         public void FindNth2() {
             // arrange
             var head = Get1234List();
@@ -100,7 +100,7 @@ namespace Tests.Cracking {
         }
 
 
-        [TestMethod]
+        [Test]
         public void FindNth3() {
             // arrange
             var head = Get1234List();
@@ -110,7 +110,7 @@ namespace Tests.Cracking {
             Assert.AreEqual(result, head);
         }
 
-        [TestMethod]
+        [Test]
         public void FindNth4() {
             // arrange
             var head = Get1234List();
@@ -120,7 +120,7 @@ namespace Tests.Cracking {
             Assert.AreEqual(result.value, 3);
         }
 
-        [TestMethod]
+        [Test]
         public void SumLIstValues() {
             // arrange
             var list1 = new Node(3);
@@ -139,7 +139,7 @@ namespace Tests.Cracking {
         }
 
 
-        [TestMethod]
+        [Test]
         public void SumLIstValues1() {
             // arrange
             var list1 = new Node(3);

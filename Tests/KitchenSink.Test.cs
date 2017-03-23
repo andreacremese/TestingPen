@@ -1,11 +1,11 @@
 ﻿using ClassLibrary1.Algos;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class KitchenSinkTest {
-        [TestMethod]
+        [Test]
         public void RotAnEmptyString() {
             // arrange
             // act
@@ -14,7 +14,7 @@ namespace Tests {
             Assert.AreEqual("", output);
         }
 
-        [TestMethod]
+        [Test]
         public void RotAOneCharacterString() {
             // arrange
             // act
@@ -23,7 +23,7 @@ namespace Tests {
             Assert.AreEqual("a", output);
         }
 
-        [TestMethod]
+        [Test]
         public void RotAOneCharacterStringThatIsA() {
             // arrange
             // act
@@ -32,7 +32,7 @@ namespace Tests {
             Assert.AreEqual("a", output);
         }
 
-        [TestMethod]
+        [Test]
         public void RotAStringWithNoWrapping() {
             // arrange
             // act
@@ -41,7 +41,7 @@ namespace Tests {
             Assert.AreEqual("abc", output);
         }
 
-        [TestMethod]
+        [Test]
         public void RotAStringWithWrapping() {
             // arrange
             // act
@@ -52,7 +52,7 @@ namespace Tests {
 
         // ================================================
 
-        [TestMethod]
+        [Test]
         public void FindMaxArrayOntwoLengthArray() {
             // act
             var output = KitchenSink.FindMax(new Int32[2] { 1, 2 });
@@ -60,7 +60,7 @@ namespace Tests {
             Assert.AreEqual(2, output);
         }
 
-        [TestMethod]
+        [Test]
         public void FindMaxArrayOnOneLengthArray() {
             // act
             var output = KitchenSink.FindMax(new Int32[1] { 2 });
@@ -68,7 +68,7 @@ namespace Tests {
             Assert.AreEqual(2, output);
         }
 
-        [TestMethod]
+        [Test]
         public void FindMaxArrayOnThreeLengthArray() {
             // act
             var output = KitchenSink.FindMax(new Int32[3] { 1, 2, 3 });
@@ -76,7 +76,7 @@ namespace Tests {
             Assert.AreEqual(4, output);
         }
 
-        [TestMethod]
+        [Test]
         public void FindMaxArrayOnSixLengthArray() {
             // act
             var output = KitchenSink.FindMax(new Int32[6] { 1, 8, 1, 1, 8 ,1 });
@@ -84,7 +84,7 @@ namespace Tests {
             Assert.AreEqual(16, output);
         }
 
-        [TestMethod]
+        [Test]
         public void FindMaxArray24LengthArray() {
             // arrange
             var inputPart = new Int32[6] { 1, 8, 1, 1, 8, 1 };

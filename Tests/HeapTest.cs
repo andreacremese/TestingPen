@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using ClassLibrary1.Structures;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class HeapTest {
        
-        [TestMethod]
+        [Test]
         public void ReturnsMin() {
             // arrange
             var sut = new MinHeap();
@@ -18,7 +18,7 @@ namespace Tests {
             Assert.AreEqual(1, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void RemovesElement() {
             // arrange
             var sut = new MinHeap();
@@ -34,7 +34,7 @@ namespace Tests {
         }
 
 
-        [TestMethod]
+        [Test]
         public void RemovesElement2() {
             // arrange
             var sut = new MinHeap();

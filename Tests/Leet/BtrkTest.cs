@@ -1,11 +1,11 @@
 ﻿using ClassLibrary1.Leet;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 
 namespace Tests.Leet {
-    [TestClass]
+[TestFixture]
     public class BtrkTest {
-        [TestMethod]
+        [Test]
         public void btrk() {
 
             var _stu = new Solution();

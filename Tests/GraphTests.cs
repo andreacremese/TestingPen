@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Library;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Tests {
-    [TestClass]
+[TestFixture]
     public class GraphTests {
         
-        [TestMethod]
+        [Test]
         public void CanAddNode() {
             // arrange
             var _sut = new Graph();
@@ -18,7 +18,7 @@ namespace Tests {
             Assert.AreEqual(1, _sut.Count, "count not updated");
         }
 
-        [TestMethod]
+        [Test]
         public void CanAddEdge() {
             // arrane
             var _sut = new Graph();
@@ -31,7 +31,7 @@ namespace Tests {
             Assert.AreEqual(_sut.AdjacencyList[2].Count, 1, "adjacency list not updated");
         }
 
-        [TestMethod]
+        [Test]
         public void Dfs1() {
             // arrange
             var _sut = new Graph();
@@ -54,7 +54,7 @@ namespace Tests {
             Assert.AreEqual(result[4], 4);
         }
 
-        [TestMethod]
+        [Test]
         public void Bfs1() {
             // arrange
             var _sut = new Graph();
@@ -95,7 +95,7 @@ namespace Tests {
             CollectionAssert.AreEqual(minPath.Select(x => x.Value).ToArray(), expected);
         }
 
-        [TestMethod]
+        [Test]
         public void CanFindNumberOfSteps() {
             var _sut = new Graph();
             for (int i = 1; i <= 4; i++) {
@@ -110,7 +110,7 @@ namespace Tests {
             Assert.AreEqual(2, n, "wrong number of steps");
         }
 
-        [TestMethod]
+        [Test]
         public void CanFindNumberOfSteps1() {
             var _sut = new Graph();
             for (int i = 1; i <= 4; i++) {
@@ -125,7 +125,7 @@ namespace Tests {
             Assert.AreEqual(1, n, "wrong number of steps");
         }
 
-        [TestMethod]
+        [Test]
         public void CanFindNumberOfSteps2() {
             var _sut = new Graph();
             for (int i = 1; i <= 4; i++) {
@@ -140,7 +140,7 @@ namespace Tests {
             Assert.AreEqual(0, n, "wrong number of steps");
         }
 
-        [TestMethod]
+        [Test]
         public void CanFindNumberOfSteps3() {
             var _sut = new Graph();
             for (int i = 1; i <= 4; i++) {
