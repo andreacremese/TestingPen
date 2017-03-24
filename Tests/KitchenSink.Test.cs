@@ -98,7 +98,6 @@ namespace Tests {
             Assert.AreEqual(160, output);
         }
 
-
         // =================== find overlaps =============================
         [Test]
         public void INtersectFindNotIntersectLowerA() {
@@ -177,6 +176,25 @@ namespace Tests {
 
 
 
+
+
+
+        //// ---=-====== string reversal
+        [Test]
+        public void StringReversalCanReverseTwoString() {
+            // act
+            var output = KitchenSink.InPlaceReversal("one two");
+            // assert
+            Assert.AreEqual("two one", output);
+        }
+
+        [Test]
+        public void StringReversalCanReverseThreeString() {
+            // act
+            var output = KitchenSink.InPlaceReversal("one two three");
+            // assert
+            Assert.AreEqual("three two one", output);
+        }
 
     }
 }

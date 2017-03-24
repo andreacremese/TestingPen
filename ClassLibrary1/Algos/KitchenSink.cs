@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ClassLibrary1.Algos {
     public class KitchenSink {
@@ -67,6 +68,48 @@ namespace ClassLibrary1.Algos {
 
 
             return true;
+        }
+
+        // ================reverse a string at the spaces "one two" => "two one"
+
+        public static String InPlaceReversal(String srt) {
+            
+            if (srt.Length == 0 || srt.Length == 1) { return srt; }
+            var s = srt.ToCharArray();
+            var i = 0; // start of the next exchage place
+            var j = s.Length - 1;
+            while (j > i) {
+                if (s[j] == ' ') {
+                    // extract word
+                    var word = CaptureWordFrom(srt, j + 1);
+                    // shift all string up by word+space between i and j
+                    for (var k = j; k > i; k--) {
+                        s[k + word.Length] = s[k - 1];
+                    }
+
+                    // put the new word in
+                    for (var k = i; k < word.Length; k++) {
+                        s[k] = word[k - i];
+                    }
+                    s[word.Length] = ' ';
+                    if (j <= i) { break; }
+                    i += word.Length + 1;
+                    j = s.Length - 1;
+                } else {
+                    j--;
+                }
+            }
+            return String.Join("",s);
+        }
+
+        private static String CaptureWordFrom(String s, Int32 k) {
+            var result = String.Empty;
+            var i = k;
+            while (i < s.Length && s[i] != ' ') {
+                result = result + s[i];
+                i++;
+            }
+            return result;
         }
     }
 }
