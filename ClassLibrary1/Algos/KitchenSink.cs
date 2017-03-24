@@ -71,6 +71,7 @@ namespace ClassLibrary1.Algos {
         }
 
         // ================reverse a string at the spaces "one two" => "two one"
+        // double spacing not implemented
 
         public static String InPlaceReversal(String srt) {
             
@@ -81,19 +82,19 @@ namespace ClassLibrary1.Algos {
             while (j > i) {
                 if (s[j] == ' ') {
                     // extract word
-                    var word = CaptureWordFrom(srt, j + 1);
+                    var word = CaptureWordFrom(String.Join("",s), j + 1);
                     // shift all string up by word+space between i and j
                     for (var k = j; k > i; k--) {
                         s[k + word.Length] = s[k - 1];
                     }
 
                     // put the new word in
-                    for (var k = i; k < word.Length; k++) {
+                    for (var k = i; k < i + word.Length; k++) {
                         s[k] = word[k - i];
                     }
-                    s[word.Length] = ' ';
-                    if (j <= i) { break; }
+                    s[i + word.Length] = ' ';
                     i += word.Length + 1;
+                    if (j <= i) { break; }
                     j = s.Length - 1;
                 } else {
                     j--;

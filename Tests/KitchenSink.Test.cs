@@ -196,5 +196,13 @@ namespace Tests {
             Assert.AreEqual("three two one", output);
         }
 
+
+        [Test]
+        public void StringReversalCanReversefourString() {
+            // act
+            var output = KitchenSink.InPlaceReversal("one two three four");
+            // assert
+            Assert.AreEqual("four three two one", output);
+        }
     }
 }
