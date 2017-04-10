@@ -14,9 +14,16 @@ Form Leetcode.com, Cracking the Code Interview, Steve Skienna's CSE 373 and othe
 
 The project can be build and run in linux as well.
 
-## install .net core
+* install .net core
 Install dotnet core from [here](https://www.microsoft.com/net/core#macos).
 
+* run `dotnet build` in the main folder
+* run tests by `cd Tests` and `dotnet test`
 
 
-Some resources https://docs.microsoft.com/en-us/dotnet/articles/core/tutorials/libraries#how-to-use-multiple-projects
+
+
+
+Some additional resources :
+
+[Developing Libraries with Cross Platform Tools](https://docs.microsoft.com/en-us/dotnet/articles/core/tutorials/libraries#how-to-use-multiple-projects)
